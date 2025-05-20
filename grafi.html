@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grafi & Fork-Join</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="navbar">
-    <div class="container">
+    <div class="container" style="display: flex; align-items: center; gap: 1rem;">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo OneCodeOS" style="height: 40px;">
+      </a>
       <h1 class="logo">OneCodeOS</h1>
       <nav>
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="sistema.html">Sistema</a></li>
-          <li><a href="concorrente.html">Concorrente</a></li>
-          <li><a href="grafi.html" class="active">Grafi</a></li>
+          <li><a href="sistema.html">Sistema Operativo</a></li>
+          <li><a href="concorrente.html">Programmazione Concorrente</a></li>
+          <li><a href="grafi.html">Grafi</a></li>
+          <li><a href="processi.html">Processi sequenziali</a></li>
           <li><a href="deadlock.html">Deadlock</a></li>
           <li><a href="contatti.html">Contatti</a></li>
         </ul>
@@ -33,7 +39,8 @@
     <p>Modello in cui un processo principale (fork) genera thread paralleli che si riuniscono (join) in un punto.</p>
 
     <h2>Cobegin-Coend</h2>
-    <p>Costrutto che permette l'esecuzione concorrente di più sezioni di codice. Tutti i blocchi tra cobegin e coend vengono eseguiti in parallelo.</p>
+    <p>Costrutto che permette l'esecuzione concorrente di più sezioni di codice. Tutti i blocchi tra cobegin e coend
+      vengono eseguiti in parallelo.</p>
   </main>
 
   <footer class="footer">
@@ -42,4 +49,5 @@
     </div>
   </footer>
 </body>
+
 </html>
