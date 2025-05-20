@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deadlock</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="navbar">
-        <div class="container" style="display: flex; align-items: center; gap: 1rem;">
-            <a href="index.html">
-                <img src="logo.png" alt="Logo OneCodeOS" style="height: 40px;">
-            </a>
-            <h1 class="logo">OneCodeOS</h1>
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sistema.html">Sistema Operativo</a></li>
-                    <li><a href="concorrente.html">Programmazione Concorrente</a></li>
-                    <li><a href="grafi.html">Grafi</a></li>
-                    <li><a href="processi.html">Processi sequenziali</a></li>
-                    <li><a href="deadlock.html">Deadlock</a></li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container" style="display: flex; align-items: center; gap: 1rem;">
+      <a href="index.html">
+        <img src="images/logo-no-scritte.png" alt="Logo OneCodeOS" style="height: 60px;">
+      </a>
+      <h1 class="logo">OneCodeOS</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sistema.html">Sistema Operativo</a></li>
+          <li><a href="concorrente.html">Programmazione Concorrente</a></li>
+          <li><a href="grafi.html">Grafi</a></li>
+          <li><a href="processi.html">Processi sequenziali</a></li>
+          <li><a href="deadlock.html">Deadlock</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="content container">
     <h2>Deadlock</h2>
-    <p>Un deadlock si verifica quando più processi si bloccano a vicenda, aspettando risorse che non verranno mai rilasciate.</p>
+    <p>Un deadlock si verifica quando più processi si bloccano a vicenda, aspettando risorse che non verranno mai
+      rilasciate.</p>
     <p>Perché si verifichi un deadlock, devono essere presenti 4 condizioni simultaneamente:
-      <ul>
-        <li>Mutua esclusione</li>
-        <li>Hold and wait (possesso e attesa)</li>
-        <li>No preemption (nessuna interruzione)</li>
-        <li>Attesa circolare</li>
-      </ul>
+    <ul>
+      <li>Mutua esclusione</li>
+      <li>Hold and wait (possesso e attesa)</li>
+      <li>No preemption (nessuna interruzione)</li>
+      <li>Attesa circolare</li>
+    </ul>
     </p>
     <p>OneCodeOS implementa tecniche di prevenzione e rilevamento dei deadlock per garantire stabilità e reattività.</p>
   </main>
@@ -47,4 +50,5 @@
     </div>
   </footer>
 </body>
+
 </html>
