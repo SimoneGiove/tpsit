@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #1f2937;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #0057ff;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #0057ff;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0057ff 0%, #559dff 100%);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero .btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #0057ff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #e5e7eb;
+}
+
+.content {
+  padding: 2rem 0;
+  line-height: 1.8;
+}
+
+.example-graph {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+}
+
+.footer {
+  background-color: #111827;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.contact-list li {
+  margin: 0.5rem 0;
+}
