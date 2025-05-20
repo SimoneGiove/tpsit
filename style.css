@@ -23,7 +23,8 @@ body {
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #0057ff;
+  color: #6b21a8;
+  /* viola scuro */
 }
 
 .menu {
@@ -43,11 +44,12 @@ body {
 
 .menu li a:hover,
 .menu li a.active {
-  color: #0057ff;
+  color: #6b21a8;
 }
 
 .hero {
-  background: linear-gradient(135deg, #0057ff 0%, #559dff 100%);
+  background: linear-gradient(135deg, #6b21a8 0%, #a855f7 100%);
+  /* viola */
   color: white;
   padding: 5rem 0;
   text-align: center;
@@ -57,13 +59,14 @@ body {
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
   background: white;
-  color: #0057ff;
+  color: #6b21a8;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
 }
+
 
 .hero .btn:hover {
   background: #e5e7eb;
