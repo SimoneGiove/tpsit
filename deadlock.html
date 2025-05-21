@@ -10,43 +10,63 @@
 
 <body>
   <header class="navbar">
-    <div class="container" style="display: flex; align-items: center; gap: 1rem;">
-      <a href="index.html">
-        <img src="images/logo-no-scritte.png" alt="Logo OneCodeOS" style="height: 60px;">
-      </a>
-      <h1 class="logo">OneCodeOS</h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sistema.html">Sistema Operativo</a></li>
-          <li><a href="concorrente.html">Programmazione Concorrente</a></li>
-          <li><a href="grafi.html">Grafi</a></li>
-          <li><a href="processi.html">Processi sequenziali</a></li>
-          <li><a href="deadlock.html">Deadlock</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <div class="container" style="display: flex; align-items: center; gap: 1rem;">
+            <a href="index.html">
+                <img src="images/logo-no-scritte.png" alt="Logo OneCodeOS" style="height: 60px;">
+            </a>
+            <h1 class="logo">OneCodeOS</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sistema.html">Sistema Operativo</a></li>
+                    <li><a href="concorrente.html">Programmazione Concorrente</a></li>
+                    <li><a href="grafi.html">Grafi</a></li>
+                    <li><a href="processi.html">Processi sequenziali</a></li>
+                    <li><a href="deadlock.html">Deadlock</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
 
   <main class="content container">
     <h2>Deadlock</h2>
-    <p>Un deadlock si verifica quando più processi si bloccano a vicenda, aspettando risorse che non verranno mai
-      rilasciate.</p>
-    <p>Perché si verifichi un deadlock, devono essere presenti 4 condizioni simultaneamente:
+    <p>Un <strong>deadlock</strong> (stallo o impasse) si verifica quando due o più processi si bloccano reciprocamente
+      in attesa di risorse, generando una situazione in cui nessuno di essi può proseguire la propria esecuzione. Questo
+      fenomeno è particolarmente critico nei sistemi operativi multitasking e nei sistemi distribuiti, dove la gestione
+      delle risorse condivise è essenziale per il corretto funzionamento del sistema.</p>
+    <p>Affinché si verifichi un deadlock, devono essere presenti contemporaneamente le seguenti quattro condizioni, note
+      come condizioni di Coffman:</p>
     <ul>
-      <li>Mutua esclusione</li>
-      <li>Hold and wait (possesso e attesa)</li>
-      <li>No preemption (nessuna interruzione)</li>
-      <li>Attesa circolare</li>
+      <li><strong>Mutua esclusione</strong>: almeno una risorsa deve essere assegnata in modo esclusivo a un processo,
+        ovvero non può essere utilizzata da più processi contemporaneamente.</li>
+      <li><strong>Hold and wait</strong> (possesso e attesa): un processo già in possesso di una o più risorse può
+        richiederne di nuove, rimanendo in attesa mentre continua a detenere le risorse già assegnate.</li>
+      <li><strong>No preemption</strong> (nessuna interruzione): le risorse non possono essere forzatamente sottratte a
+        un processo; possono essere rilasciate solo volontariamente dal processo stesso.</li>
+      <li><strong>Attesa circolare</strong>: deve esistere una catena circolare di due o più processi, in cui ciascun
+        processo è in attesa di una risorsa detenuta dal successivo nella catena.</li>
     </ul>
+    <p>Per garantire l’affidabilità e la reattività del sistema, <strong>OneCodeOS</strong> integra avanzate tecniche di
+      <em>prevenzione</em>, <em>evitamento</em> e <em>rilevamento</em> dei deadlock. Tali meccanismi includono:</p>
+    <ul>
+      <li><strong>Allocazione sicura delle risorse</strong>: utilizzo di algoritmi come l’algoritmo del banchiere per
+        evitare configurazioni pericolose.</li>
+      <li><strong>Monitoraggio attivo</strong>: il sistema rileva automaticamente eventuali cicli di attesa e interviene
+        con strategie correttive.</li>
+      <li><strong>Prevenzione strutturale</strong>: le richieste di risorse seguono un ordine predefinito, impedendo
+        l’instaurarsi di attese circolari.</li>
+      <li><strong>Rilascio forzato e rollback</strong>: in casi estremi, alcuni processi vengono temporaneamente
+        interrotti o riavviati per liberare risorse critiche.</li>
+    </ul>
+    <p>Grazie a queste soluzioni, OneCodeOS garantisce un ambiente stabile, efficiente e adatto anche a scenari ad alta
+      concorrenza come lo sviluppo software, l’elaborazione parallela e i sistemi server.
     </p>
-    <p>OneCodeOS implementa tecniche di prevenzione e rilevamento dei deadlock per garantire stabilità e reattività.</p>
   </main>
-
- <footer class="footer">
+    <footer class="footer">
         <div class="container">
-            <p>OneCode, Inc. | Stadio Franco Fanuzzi, 72100 Brindisi | <br>Telefono: +39 06 12345678 | Email:
+            <p>OneCode, Inc. | Via dell'Innovazione 42, 00100 Roma | <br>Telefono: +39 06 12345678 | Email:
                 info@onecode.com</p>
         </div>
     </footer>

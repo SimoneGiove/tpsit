@@ -30,15 +30,28 @@
   </header>
 
   <main class="content container">
-    <h2>Elaborazione Sequenziale vs Parallela</h2>
-    <p>L'elaborazione sequenziale prevede che le istruzioni vengano eseguite una dopo l'altra.</p>
-    <p>L'elaborazione parallela permette l'esecuzione simultanea di più istruzioni, migliorando le prestazioni su
-      hardware multi-core.</p>
-
+    
     <h2>Cos'è la Programmazione Concorrente?</h2>
-    <p>Permette a più processi o thread di essere eseguiti simultaneamente, anche su una singola CPU, grazie alla
-      divisione del tempo.</p>
-    <p>OneCodeOS supporta pienamente la concorrenza grazie all'uso combinato di ULT e KLT.</p>
+    <p>La <strong>programmazione concorrente</strong> è un paradigma che consente l'esecuzione di più processi o thread
+      in modo apparentemente simultaneo. Anche su sistemi con una sola CPU, ciò è reso possibile grazie alla
+      <strong>divisione del tempo</strong> (time slicing), dove il processore alterna rapidamente tra diverse attività,
+      offrendo all'utente l'illusione della simultaneità.</p>
+    <p>La concorrenza è fondamentale nei sistemi operativi moderni per garantire la reattività delle applicazioni,
+      l'efficienza nell'uso delle risorse e il supporto al multitasking. È particolarmente utile in scenari come
+      l'elaborazione di input/output, la gestione di interfacce utente, o il calcolo distribuito.</p>
+    <p><strong>OneCodeOS</strong> offre un supporto avanzato alla programmazione concorrente attraverso l'integrazione
+      combinata di due modelli di threading:</p>
+      <li><strong>ULT (User-Level Threads)</strong>: thread gestiti a livello utente, che permettono un rapido switching
+        tra attività senza coinvolgere il kernel. Sono più leggeri e adatti a operazioni frequenti e brevi.</li>
+      <li><strong>KLT (Kernel-Level Threads)</strong>: thread gestiti direttamente dal kernel del sistema operativo, con
+        pieno accesso alle risorse hardware e al parallelismo su CPU multiple. Garantisce stabilità e bilanciamento nei
+        carichi complessi.</li>
+    </ul>
+    <p>Questa architettura ibrida consente a OneCodeOS di massimizzare la flessibilità e le prestazioni: i thread utente
+      possono essere gestiti in maniera estremamente efficiente, mentre i thread kernel assicurano un utilizzo ottimale
+      dei core fisici del processore, soprattutto in ambienti multi-core e multi-tasking.</p>
+    <p>Grazie a questi meccanismi, OneCodeOS è in grado di gestire in modo fluido applicazioni concorrenti complesse,
+      migliorando drasticamente i tempi di risposta e la scalabilità del sistema.</p>
   </main>
 
  <footer class="footer">
