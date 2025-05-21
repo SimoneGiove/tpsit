@@ -10,38 +10,63 @@
 
 <body>
   <header class="navbar">
-    <div class="container" style="display: flex; align-items: center; gap: 1rem;">
-      <a href="index.html">
-        <img src="images/logo-no-scritte.png" alt="Logo OneCodeOS" style="height: 60px;">
-      </a>
-      <h1 class="logo">OneCodeOS</h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sistema.html">Sistema Operativo</a></li>
-          <li><a href="concorrente.html">Programmazione Concorrente</a></li>
-          <li><a href="grafi.html">Grafi</a></li>
-          <li><a href="processi.html">Processi sequenziali</a></li>
-          <li><a href="deadlock.html">Deadlock</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <div class="container" style="display: flex; align-items: center; gap: 1rem;">
+            <a href="index.html">
+                <img src="images/logo-no-scritte.png" alt="Logo OneCodeOS" style="height: 60px;">
+            </a>
+            <h1 class="logo">OneCodeOS</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sistema.html">Sistema Operativo</a></li>
+                    <li><a href="concorrente.html">Programmazione Concorrente</a></li>
+                    <li><a href="grafi.html">Grafi</a></li>
+                    <li><a href="processi.html">Processi sequenziali</a></li>
+                    <li><a href="deadlock.html">Deadlock</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
   <main class="content container">
     <h2>Esempi di Grafo delle Precedenze</h2>
-    <p>I grafi delle precedenze rappresentano le dipendenze tra attività.</p>
-    <img src="grafico-esempio.png" alt="Esempio di grafo" class="example-graph">
+    <div style="text-align: center;">
+      <h3>Flusso Parallelo</h3>
+      <img src="grafo-parallelo.jpg" alt="Diagramma di flusso parallelo" style="max-width: 50%; height: auto;">
+      <p>Nel flusso parallelo, diverse operazioni vengono eseguite simultaneamente in rami separati, per poi convergere.
+        Questo approccio rappresenta perfettamente il concetto di programmazione concorrente, dove più attività
+        indipendenti
+        possono essere processate nello stesso intervallo di tempo.
+        In questo esempio: </p>
+      <ul>
+        <li>Le operazioni 2 * 6, 1 + 4 e 5 - 2 vengono eseguite in parallelo.</li>
+        <li>I risultati intermedi vengono poi utilizzati per calcoli successivi, come 5 * 3 e 12 + 15.</li>
+        <li>Il processo termina con un unico risultato finale: 27.</li>
+        <li>Ideale per sistemi multi-thread o processi asincroni, dove l'efficienza è prioritaria.</li>
+      </ul> <br>
 
+      <h3>Flusso Sequenziale</h3>
+      <img src="grafo-sequenziale.jpg" alt="Diagramma di flusso sequenziale"
+        style="max-width: 25%; height: auto;">
+      <p>Il flusso sequenziale rappresenta una catena lineare di operazioni, dove ogni passo dipende dal completamento
+        del
+        precedente. È il modello classico di esecuzione in molti linguaggi di programmazione imperativi.
+        In questo caso:</p>
+      <ul>
+        <li>Le operazioni vengono svolte una alla volta: prima 2 * 6, poi 1 + 4, e così via.</li>
+        <li>L’ordine è fondamentale e non è possibile anticipare nessun calcolo.</li>
+        <li>Anche qui si arriva al valore finale 27, ma tramite un approccio più semplice e prevedibile.</li>
+        <li>Perfetto per algoritmi deterministici e flussi logici semplici.</li>
+      </ul>
+    </div>
   </main>
-  
-<footer class="footer">
-        <div class="container">
-            <p>OneCode, Inc. | Stadio Franco Fanuzzi, 72100 Brindisi | <br>Telefono: +39 06 12345678 | Email:
-                info@onecode.com</p>
-        </div>
-    </footer>
+
+  <footer class="footer">
+    <div class="container">
+      <p>OneCode, Inc. | Via dell'Innovazione 42, Roma | info@onecode.com</p>
+    </div>
+  </footer>
 </body>
 
 </html>
